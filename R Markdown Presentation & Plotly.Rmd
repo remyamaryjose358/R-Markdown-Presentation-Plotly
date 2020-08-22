@@ -1,0 +1,20 @@
+---
+title: "R Markdown Presentation & Plotly"
+author: "Remya Mary Jose"
+date: "August 21, 2020"
+output: html_document
+runtime: shiny
+---
+
+```{r}
+library(plotly)
+library(ggplot2)
+```
+
+```{r}
+df <- data.frame(x =  1:10, y = (1:10)^2)
+p <- ggplot(df, aes(x = x, y = y)) 
+p+ geom_line() + labs(x = "X", y = "Y", title = "X and Y")
+```
+
+
